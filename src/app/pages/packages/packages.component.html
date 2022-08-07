@@ -1,0 +1,83 @@
+<div class="grid md:grid-cols-2 grid-cols-1">
+    <nb-flip-card *ngFor="let package of packages">
+        <nb-card-front>
+            <nb-card>
+                <nb-card-body class="package-info">
+                    <p>
+                        <span>package Name : </span>
+                        <span> {{package.packageName}}</span>
+                    </p>
+
+                    <p>
+                        <span>package Address : </span>
+                        <span> {{package.packageAddress}}</span>
+                    </p>
+
+                    <p>
+                        <span>package Contents : </span>
+                        <span>{{package.packageContents}}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>package Destination : </span>
+                        <span>{{
+                            package.packageDestination
+                            }}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>package Weight : </span>
+                        <span>{{package.packageWeight}}
+                        </span>
+                    </p>
+
+                    <p>
+                        <span>tracking Number : </span>
+                        <span>{{package.trackingNumber}} </span>
+                    </p>
+
+                    <p>
+                        <span>createdOn : </span>
+                        <span>{{package.createdOn| date}} </span>
+                    </p>
+
+                    <button nbButton (click)="addTrackinginfo(package.trackingNumber)">Add tracking</button>
+                </nb-card-body>
+            </nb-card>
+        </nb-card-front>
+        <nb-card-back>
+            <nb-card>
+                <nb-card-body>
+                    <nb-stepper orientation="horizontal">
+                        <nb-step *ngFor="let track of package.packageTracking; let i = index">
+
+                            <div class="package-info">
+                                <p>
+                                    current Location : {{track.currentLocation}}
+                                </p>
+                                <p>
+                                    since : {{track.date}}, {{track.time}}
+                                </p>
+                                <p>
+                                    Confirmation : {{track.iconType}}
+                                </p>
+
+                                <p>
+                                    Map Location: {{track.map_Info}}
+                                </p>
+
+                                <p>
+                                    Tag line : {{track.tagLine}}
+                                </p>
+                            </div>
+                            <button nbButton disabled nbStepperNext>prev</button>
+                            <button nbButton nbStepperNext>next</button>
+                        </nb-step>
+                    </nb-stepper>
+                </nb-card-body>
+            </nb-card>
+        </nb-card-back>
+    </nb-flip-card>
+</div>

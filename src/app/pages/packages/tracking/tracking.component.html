@@ -1,0 +1,70 @@
+<div class="w-full h-full mx-auto bg-gray-200 text-gray-800 p-5">
+
+    
+    <form [formGroup]="trackingForm">
+        <p class="">
+            <nb-form-field>
+                <label class="caption text-hint">current Location </label>
+                <input formControlName="currentLocation" nbInput fullWidth  />
+            </nb-form-field>
+        </p>
+
+        <p class="">
+            <nb-form-field>
+                <span class="caption text-hint">date: </span>
+                <input formControlName="date" nbInput fullWidth >
+            </nb-form-field>
+        </p>
+
+        <p class="">
+            <nb-form-field>
+                <span class="caption text-hint">Progress: </span>
+                <select formControlName="iconType" fullWidth >
+                    <option selected>
+                        Pleace Choose
+                    </option>
+
+                    <option value="in_trasit">
+                        In Trasit
+                    </option>
+
+                    <option value="failed">
+                        Failed
+                    </option>
+
+                    <option value="confirmed">
+                        Confirmed
+                    </option>
+
+                    <option value="delivered">
+                        Delivered
+                    </option>
+                </select>
+                
+            </nb-form-field>
+        </p>
+
+        <p class="">
+            <nb-form-field>
+                <span class="caption text-hint">map URL</span>
+                <input formControlName="map_Info" nbInput   />
+            </nb-form-field>
+        </p>
+
+        <p class="">
+            <nb-form-field>
+                <span class="caption text-hint">tag line </span>
+                <input formControlName="tagLine" nbInput fullWidth  />
+            </nb-form-field>
+        </p>
+
+        <p class="">
+            <nb-form-field>
+                <span class="caption text-hint">time</span>
+                <input formControlName="time" nbInput fullWidth  />
+            </nb-form-field>
+        </p>
+
+        <button nbButton shape="rectangle" status="primary" outline (click)="postForm(_id)">add TimeLine</button>
+    </form>
+</div>

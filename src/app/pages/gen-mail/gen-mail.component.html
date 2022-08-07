@@ -1,0 +1,60 @@
+<nb-card accent="info">
+    <nb-card-header>Send Email</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="mailForm">
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">Email </span>
+                    <input formControlName="email" nbInput />
+                </nb-form-field>
+            </p>
+
+
+            <p class="">
+                <nb-form-field>
+                    <label class="caption text-hint"> Header : </label>
+                    <input formControlName="Header" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">sender Name : </span>
+                    <input formControlName="senderName" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint"> subject :</span>
+                    <input formControlName="subject" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint"> name :</span>
+                    <input formControlName="name" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint"> tracking Number :</span>
+                    <input formControlName="trackingNumber" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint"> body : </span>
+                    <textarea formControlName="body" nbInput></textarea>
+                </nb-form-field>
+            </p>
+
+
+
+            <button nbButton shape="rectangle" status="primary" outline (click)="sendMail()">Send Mail</button>
+        </form>
+    </nb-card-body>
+</nb-card>

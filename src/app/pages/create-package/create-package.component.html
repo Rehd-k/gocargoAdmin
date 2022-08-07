@@ -1,0 +1,50 @@
+<nb-card accent="info">
+    <nb-card-header>Create Package</nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="packageForm">
+            <p class="">
+                <nb-form-field>
+                    <label class="caption text-hint">Package Name </label>
+                    <input formControlName="packageName" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">package Contents </span>
+                    <textarea formControlName="packageContents" nbInput></textarea>
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">package Weight </span>
+                    <input formControlName="packageWeight" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">package Address </span>
+                    <input formControlName="packageAddress" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">package Destination </span>
+                    <input formControlName="packageDestination" nbInput />
+                </nb-form-field>
+            </p>
+
+            <p class="">
+                <nb-form-field>
+                    <span class="caption text-hint">package Owners Name </span>
+                    <input formControlName="packageOwner" nbInput />
+                </nb-form-field>
+            </p>
+
+            <button nbButton shape="rectangle" status="primary" outline (click)="postForm()">Create Package</button>
+        </form>
+    </nb-card-body>
+</nb-card>

@@ -1,0 +1,50 @@
+<div class="grid md:grid-cols-2 grid-cols-1">
+    <nb-card *ngFor="let mail of Mails">
+        <nb-card-body>
+
+            <p class="">
+
+                <span class="caption text-hint">Email : </span>
+                <span>{{mail.email}}</span>
+
+            </p>
+
+
+            <p class="">
+
+                <label class="caption text-hint"> Header : </label>
+                <span>{{mail.header}}</span>
+            </p>
+
+            <p class="">
+
+                <span class="caption text-hint">sender Name : </span>
+                <span>{{mail.senderName}}</span>
+            </p>
+
+            <p class="">
+
+                <span class="caption text-hint"> subject :</span>
+                <span>{{mail.subject}}</span>
+            </p>
+
+            <p class="">
+
+                <span class="caption text-hint"> name :</span>
+                <span>{{mail.name}}</span>
+            </p>
+
+            <p class="">
+
+                <span class="caption text-hint"> tracking Number :</span>
+                <span>{{mail.trackingNumber}}</span>
+            </p>
+
+            <p class="">
+                
+                <span class="caption text-hint"> body : </span>
+                <span>{{mail.body}}</span>
+            </p>
+        </nb-card-body>
+    </nb-card>
+</div>
